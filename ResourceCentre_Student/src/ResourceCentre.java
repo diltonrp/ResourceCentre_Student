@@ -1,9 +1,11 @@
 import java.util.ArrayList;
 
-public class ResourceCentre {
+import org.junit.Test;
 
+public class ResourceCentre {
+	@Test
 	public static void main(String[] args) {
-		// Hai
+		
 		ArrayList<Camcorder> camcorderList = new ArrayList<Camcorder>();
 		ArrayList<Chromebook> chromebookList = new ArrayList<Chromebook>();
 
@@ -95,7 +97,7 @@ public class ResourceCentre {
 		}
 
 	}
-
+	@Test
 	public static void menu() {
 		ResourceCentre.setHeader("RESOURCE CENTRE APP");
 		System.out.println("1. Display Inventory");
@@ -106,13 +108,13 @@ public class ResourceCentre {
 		Helper.line(80, "-");
 
 	}
-	
+	@Test
 	public static void setHeader(String header) {
 		Helper.line(80, "-");
 		System.out.println(header);
 		Helper.line(80, "-");
 	}
-
+	@Test
 	public static String showAvailability(boolean isAvailable) {
 		String avail;
 
@@ -125,6 +127,7 @@ public class ResourceCentre {
 	}
 
 	//================================= Option 1 View items (CRUD- Read) =================================
+	@Test
 	public static String retrieveAllCamcorder(ArrayList<Camcorder> camcorderList) {
 		String output = "";
 
@@ -137,6 +140,7 @@ public class ResourceCentre {
 		}
 		return output;
 	}
+	@Test
 	public static void viewAllCamcorder(ArrayList<Camcorder> camcorderList) {
 		ResourceCentre.setHeader("CAMCORDER LIST");
 		String output = String.format("%-10s %-30s %-10s %-10s %-20s\n", "ASSET TAG", "DESCRIPTION",
@@ -144,12 +148,14 @@ public class ResourceCentre {
 		 output += retrieveAllCamcorder(camcorderList);	
 		System.out.println(output);
 	}
-
+	@Test
 	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) {
 		String output = "";
 		// write your code here
 		return output;
 	}
+
+	@Test
 	public static void viewAllChromebook(ArrayList<Chromebook> chromebookList) {
 		
 		String output = retrieveAllChromebook(chromebookList);
@@ -157,6 +163,7 @@ public class ResourceCentre {
 	}
 
 	//================================= Option 2 Add an item (CRUD - Create) =================================
+	@Test
 	public static Camcorder inputCamcorder() {
 		String tag = Helper.readString("Enter asset tag > ");
 		String description = Helper.readString("Enter description > ");
@@ -166,12 +173,13 @@ public class ResourceCentre {
 		return cc;
 		
 	}
+	@Test
 	public static void addCamcorder(ArrayList<Camcorder> camcorderList, Camcorder cc) {
 		
 		camcorderList.add(cc);
 		
 	}
-	
+	@Test
 	public static Chromebook inputChromebook() {	
 		Chromebook cb =null;
 		// write your code here
@@ -179,11 +187,13 @@ public class ResourceCentre {
 		return cb;
 		
 	}	
+	@Test
 	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
 		// write your code here
 	}
 	
 	//================================= Option 3 Loan an item (CRUD - Update) =================================
+	@Test
 	public static boolean doLoanCamcorder(ArrayList<Camcorder> camcorderList, String tag, String dueDate) {
 		
 		boolean isLoaned = false;
@@ -201,6 +211,7 @@ public class ResourceCentre {
 		}
 		return isLoaned;
 	}
+	@Test
 	public static void loanCamcorder(ArrayList<Camcorder> camcorderList) {
 		ResourceCentre.viewAllCamcorder(camcorderList);
 		String tag = Helper.readString("Enter asset tag > ");
@@ -212,11 +223,12 @@ public class ResourceCentre {
 			System.out.println("Camcorder " + tag + " loaned out");
 		}
 	}
-	
+	@Test
 	public static boolean doLoanChromebook(ArrayList<Chromebook> chromebookList, String tag, String dueDate) {
 		// write your code here
 		return true;
 	}
+	@Test
 	public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
 		// write your code here
 		
@@ -224,6 +236,7 @@ public class ResourceCentre {
 	}
 	
 	//================================= Option 4 Return an item (CRUD - Update)=================================
+	@Test
 	public static boolean doReturnCamcorder(ArrayList<Camcorder> camcorderList,String tag) {
 		boolean isReturned = false;
 
@@ -239,6 +252,7 @@ public class ResourceCentre {
 		return isReturned;
 		
 	}
+	@Test
 	public static void returnCamcorder(ArrayList<Camcorder> camcorderList) {
 		ResourceCentre.viewAllCamcorder(camcorderList);
 		String tag = Helper.readString("Enter asset tag > ");
@@ -250,7 +264,7 @@ public class ResourceCentre {
 			System.out.println("Camcorder " + tag + " returned");
 		}
 	}
-
+	@Test
 	public static boolean doReturnChromebook(ArrayList<Chromebook> chromebookList,String tag){
 		boolean isReturned = false;
 		for (int i = 0; i < chromebookList.size(); i++) {
@@ -278,6 +292,7 @@ public class ResourceCentre {
 
 		return isReturned;
 	}
+	@Test
 	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
 		// write your code here
 
