@@ -14,7 +14,13 @@ public class Chromebook extends Item{
 	public String toString(){
 		String output = "";
 		// Write your codes here
+		output += "Chromebook [os=" + os + ", getOs()=" + getOs() + ", getDueDate()=" + getDueDate() + ", isAvailable()="
+				+ getIsAvailable() + ", getAssetTag()=" + getAssetTag() + ", getDescription()=" + getDescription()
+				+ ", getClass()=" + getClass() + ", hashCode" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
 		return output;
+		// Hello Robert, I am at line 18
+		// Hai there :)
 	}
 }
 

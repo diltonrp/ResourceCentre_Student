@@ -14,6 +14,10 @@ private int opticalZoom;
 	public String toString(){
 		String output = "";
 		// Write your codes here
+		output += "Camcorder [opticalZoom=" + opticalZoom + ", getOpticalZoom()=" + getOpticalZoom() + ", getDueDate()="
+				+ getDueDate() + ", isAvailable()=" + getIsAvailable() + ", getAssetTag()=" + getAssetTag()
+				+ ", getDescription()=" + getDescription() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ ", toString()=" + super.toString() + "]";
 		return output;
 	}
 }
