@@ -38,7 +38,7 @@ public class ResourceCentreTest {
 	}
 
 	
-	//@Test
+	@Test
 	public void testAddCamcorder() {
 		// Item list is not null, so that can add a new item
 		assertNotNull("Test if there is valid Camcorder arraylist to add to", camcorderList);
@@ -56,13 +56,13 @@ public class ResourceCentreTest {
 		assertEquals("Test that Camcorder arraylist size is 3?", 3, camcorderList.size());
 		assertSame("Test that Camcorder is added same as 3rd item of the list?", cc3, camcorderList.get(2));
 	}
-	//@Test
+	@Test
 	public void testAddChromebook() {
 		//fail("Not yet implemented");
 		// write your code here 
 	}
 	
-	//@Test
+	@Test
 	public void testRetrieveAllCamcorder() {
 		// Test if Item list is not null but empty, so that can add a new item
 		assertNotNull("Test if there is valid Camcorder arraylist to add to", camcorderList);
@@ -112,7 +112,7 @@ public class ResourceCentreTest {
 		assertEquals("Check that ViewAllCamcorderlist", testOutput, allChromebook);
 	}
 
-	//@Test
+	@Test
 	public void testDoLoanCamcorder() {
 
 		//boundary
@@ -144,13 +144,13 @@ public class ResourceCentreTest {
 
 	}
 	
-	//@Test
+	@Test
 	public void testDoLoanChromebook() {
 		//fail("Not yet implemented");
 		// write your code here
 	}
 	
-	//@Test
+	@Test
 	public void testDoReturnCamcorder() {
 		//boundary
 		assertNotNull("Test if there is valid Camcorder arraylist to add to", camcorderList);
@@ -168,7 +168,7 @@ public class ResourceCentreTest {
 		assertFalse("Test if non-existing amcorder CC0013 is returned - false?", isReturned);
 		
 	}
-	//@Test
+	@Test
 	public void testDoReturnChromebook() {
 		//fail("Not yet implemented");
 		// write your code here
